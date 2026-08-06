@@ -18,6 +18,11 @@ app.get('/', (req, res) => {
   res.render('index', { cars: inventory.cars, makes: inventory.makes });
 });
 
+app.get('/rosh', (req, res) => {
+  res.render('hi rosh');
+});
+
+
 app.get('/page', (req, res) => {
   res.render(req.query.name || 'index', { cars: inventory.cars, makes: inventory.makes });
 });
